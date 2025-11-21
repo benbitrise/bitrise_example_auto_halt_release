@@ -21,7 +21,7 @@ Client-level crash and reliability data flow into Sentry. An [Internal Integrati
 ## How to set it up
 
 1. Set up the [AWS components](aws_components.md).
-1. Set up the [Sentry webhook](sentry_webhook).
+1. Set up the [Sentry webhook](sentry_webhook.md).
 1. Populate the [code in your Lambda](lambda_code.js).
     - Update the sample code with project specific variables like Bitrise Connected App ID, AWS region, and secret variable names
     - Modify sample code logic for Sentry event parsing and Bitrise Release selection to match project requirements
