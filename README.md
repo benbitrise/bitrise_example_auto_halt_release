@@ -22,7 +22,7 @@ Client-level crash and reliability data flow into Sentry. An [Internal Integrati
 
 1. Set up the [AWS components](aws_components.md).
 1. Set up the [Sentry webhook](sentry_webhook.md).
-1. Populate the [code in your Lambda](lambda_code.js).
+1. Populate the [code in your Lambda](lambda_code.js) and redeploy your Lambda.
     - Update the sample code with project specific variables like Bitrise Connected App ID, AWS region, and secret variable names
     - Modify sample code logic for Sentry event parsing and Bitrise Release selection to match project requirements
     - The sample code halts App Store releases. Use the [Play Store pause endpoint](https://api.bitrise.io/release-management/api-docs/index.html#/Releases%20-%20Google%20Play%20Store%20Release/PauseStagedRolloutScheduleAndroid) for Android apps.
