@@ -4,12 +4,12 @@
 
 1. Create a Lambda function. Use the default settings provided by the console.
 
-![Creating a Function](create_function.png "Creating a Function")
+![Creating a Function](images/create_function.png)
 
 2. Add a trigger. Select API Gateway > Create a new API > REST API with Security Open.
 
-![Add trigger](add_trigger.png "Add trigger")
-![Add REST API trigger](add_trigger2.png "Add REST API trigger")
+![Add trigger](images/add_trigger.png "Add trigger")
+![Add REST API trigger](images/add_trigger2.png "Add REST API trigger")
 
 3. On your API Gateway, define a Resource policy (left option menu) that blocks all IP addresses except those [belonging to Sentry](https://docs.sentry.io/security-legal-pii/security/ip-ranges/). This will prevent untrusted sources from making requests to your API.
 
@@ -42,7 +42,7 @@
 
 4. On your Lambda, under Configuration > Permissions, under "Resource-based policy statements," ensure your API Gateway has "InvokeFunction" for your Lambda.
 
-![InvokeFunction Permission](invoke_function.png "InvokeFunction Permission")
+![InvokeFunction Permission](images/invoke_function.png)
 
 5. Create secrets. 
 
@@ -69,13 +69,13 @@ Both secrets will need resource policies that make them available to the Lambda 
 
 The ARN for the Lambda execution role comes from your Lambda's Configuration > Permissions section. You can click the link on this section to open a page with a click-to-copy version of the ARN.
 
-![Lambda Execution Role](execution_role.png "Lambda Execution Role")
+![Lambda Execution Role](images/execution_role.png)
 
 6. Deploy the API Gateway and Lambda
 
 Use the "Deploy" button under the Code section of the Lambda to deploy the Lambda (we will add the code shortly). Use the "Deploy API" button in the Resources section of the API Gateway to deploy the API.
 
-![Deploy Lambda](deploy_lambda.png)
-![Deploy API](deploy_api.png)
+![Deploy Lambda](images/deploy_lambda.png)
+![Deploy API](images/deploy_api.png)
 
 Deploying the API will require creating a stage, and the stage will contain the Invoke URL. That URL will be used when setting up the Sentry internal integration.

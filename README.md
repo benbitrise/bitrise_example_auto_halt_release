@@ -15,7 +15,7 @@ This gist explains how you can automate the halting of the rollout. Automating t
 
 Client-level crash and reliability data flow into Sentry. An [Internal Integration](https://docs.sentry.io/organization/integrations/integration-platform/internal-integration/) is created as a webhook destination. If the [metric alert](https://docs.sentry.io/organization/integrations/integration-platform/webhooks/metric-alerts/) threshold is met, Sentry sends a webhook to AWS, triggering a [Lambda](https://aws.amazon.com/lambda/). The logic within the Lambda decides to halt the release via [Release Management's REST API](https://api.bitrise.io/release-management/api-docs/index.html). 
 
-![Diagram](diagram.png "Diagram")
+![Diagram](images/diagram.png "Diagram")
 
 
 ## How to set it up
